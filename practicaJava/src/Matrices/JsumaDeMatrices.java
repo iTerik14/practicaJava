@@ -135,7 +135,8 @@ public class JsumaDeMatrices extends javax.swing.JFrame {
         
         this.mostrarMatrizA(this.llenarMatrizA(fA, cA), fA, cA);
         this.mostrarMatrizB(this.llenarMatrizB(fB, cB), fB, cB);
-        this.sumaMatriz((this.llenarMatrizA(fA, cA)), (this.llenarMatrizB(fB, cB)), fB, cB);
+        this.mostrarMatrizSuma(this.sumaMatriz(this.llenarMatrizA(fA, cA), this.llenarMatrizB(fB, cB), fB, cB), fB, cB);
+        
     }//GEN-LAST:event_btnsumaActionPerformed
 
     /**
