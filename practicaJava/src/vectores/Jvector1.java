@@ -2,8 +2,13 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+
+    serie = 1,0,0,1,1,1,0,0,0,0,1,1,1,1,1,...
+            1 1 2 1 2 3 1 2 3 4 1 2 3 4 5   
  */
 package vectores;
+
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -27,21 +32,53 @@ public class Jvector1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        txtdim = new javax.swing.JTextField();
+        btnvector = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblvector = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("Dimension");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 34, -1, 36));
+        getContentPane().add(txtdim, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 36, 69, 36));
+
+        btnvector.setText("Generar");
+        btnvector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnvectorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnvector, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 36, -1, 36));
+
+        tblvector.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(tblvector);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 620, 428));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vectores/CONOS.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 170, 290));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnvectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvectorActionPerformed
+        // TODO add your handling code here:
+        int n = Integer.parseInt(txtdim.getText());
+        int v[] = this.llenarVector(n);
+        this.mostrarVector(v);
+    }//GEN-LAST:event_btnvectorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,7 +114,46 @@ public class Jvector1 extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void mostrarVector(int v[]){
+        DefaultTableModel model = (DefaultTableModel) tblvector.getModel();
+        model.setRowCount(1);
+        model.setColumnCount(v.length);              //0 1 2 3 4 5
+        for (int i = 0; i < v.length; i++) { // v[] = {4 2 10 4 5 6} / v.length
+            tblvector.setValueAt(v[i], 0, i);
+        }
+    }          //1  2    3      4
+       //serie = 1,0,0,1,1,1,0,0,0,0,1,1,1,1,1,...
+       //        1 1 2 1 2 3 1 2 3 4 1 2 3 4 5 
+    public int [] llenarVector(int n){
+        int v[] = new int[n]; //5
+        int i=0,x=1,j=1,b=1;
+        while (i<n) {  // n=5          
+            v[i]=b; // 1 0 0 1 1
+            if(j<x){ //0 1 2 3 4   
+                j++;
+            }else{
+                b=1-b;
+                x++;
+                j=1;
+            }
+            i++;
+        }
+        return v;
+        /*  i=0 1 2 3 4 5
+            x=1 2 3
+            j=1 1 2 1 2 3
+            b=1 0 1 
+        */
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnvector;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblvector;
+    private javax.swing.JTextField txtdim;
     // End of variables declaration//GEN-END:variables
 }
