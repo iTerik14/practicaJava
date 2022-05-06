@@ -196,17 +196,6 @@ public class JsumaDeMatrices extends javax.swing.JFrame {
         }
     }
 
-    public void mostrarMatrizSuma(int m[][], int f, int c) {
-        DefaultTableModel model = (DefaultTableModel) tblresultado.getModel();
-        model.setRowCount(f);
-        model.setColumnCount(c);
-        for (int i = 0; i < f; i++) {
-            for (int j = 0; j < c; j++) {
-                tblresultado.setValueAt(m[i][j], i, j);
-            }
-        }
-    }
-
     public int[][] llenarMatrizA(int f, int c) {
         int mA[][] = new int[f][c];
         int a = 2;
@@ -231,6 +220,17 @@ public class JsumaDeMatrices extends javax.swing.JFrame {
         return mB;
     }
 
+    public void mostrarMatrizSuma(int m[][], int f, int c) {
+        DefaultTableModel model = (DefaultTableModel) tblresultado.getModel();
+        model.setRowCount(f);
+        model.setColumnCount(c);
+        for (int i = 0; i < f; i++) {
+            for (int j = 0; j < c; j++) {
+                tblresultado.setValueAt(m[i][j], i, j);
+            }
+        }
+    }
+    
     public int[][] sumaMatriz(int mA[][], int mB[][], int f, int c) {
         int ms[][] = new int[f][c];
         for (int i = 0; i < f; i++) {

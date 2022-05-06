@@ -141,6 +141,15 @@ public class Jmatriz7 extends javax.swing.JFrame {
         }
     }
     
+    /*
+        1   0   0   0   1
+        0   1   0   1   0
+        0   0   1   0   0
+        0   1   0   1   0
+        1   0   0   0   1
+    
+    */
+    
     public int [][] llenarMatriz(int f,int c){
         int m[][]=new int[f][c];
         int b=f-1;
