@@ -148,8 +148,8 @@ public class Jmatriz7 extends javax.swing.JFrame {
             for (int j = 0; j < c; j++) {
                 if (i==j) {
                     m[i][j]=1;
-                    m[i][b]=1;
-                }   
+                }  
+                m[i][b]=1;
             }
         }
         return m;
