@@ -11,12 +11,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author ERIK
  */
-public class Jmatriz8 extends javax.swing.JFrame {
+public class Jmatriz_06 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Jmatriz8
+     * Creates new form Jmatriz6
      */
-    public Jmatriz8() {
+    public Jmatriz_06() {
         initComponents();
     }
 
@@ -29,20 +29,13 @@ public class Jmatriz8 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtcolumn = new javax.swing.JTextField();
-        btngenerar = new javax.swing.JButton();
-        txtrow = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblmatriz = new javax.swing.JTable();
+        btngenerar = new javax.swing.JButton();
+        txtcolumn = new javax.swing.JTextField();
+        txtrow = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        btngenerar.setText("Generar");
-        btngenerar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btngenerarActionPerformed(evt);
-            }
-        });
 
         tblmatriz.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -54,35 +47,42 @@ public class Jmatriz8 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblmatriz);
 
+        btngenerar.setText("Generar");
+        btngenerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btngenerarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btngenerar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtcolumn)
-                    .addComponent(txtrow))
-                .addGap(70, 70, 70)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtcolumn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtrow, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btngenerar))
+                .addGap(50, 50, 50)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(txtrow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(txtcolumn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btngenerar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(68, Short.MAX_VALUE))
+                        .addComponent(btngenerar)
+                        .addGap(252, 252, 252))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(63, 63, 63))))
         );
 
         pack();
@@ -112,25 +112,28 @@ public class Jmatriz8 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jmatriz8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jmatriz_06.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jmatriz8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jmatriz_06.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jmatriz8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jmatriz_06.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jmatriz8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jmatriz_06.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jmatriz8().setVisible(true);
+                new Jmatriz_06().setVisible(true);
             }
         });
     }
-
-    public void mostrarMatriz(int m[][], int f, int c) {
+    
+    public void mostrarMatriz(int m[][],int f,int c){
         DefaultTableModel model = (DefaultTableModel) tblmatriz.getModel();
         model.setRowCount(f);
         model.setColumnCount(c);
@@ -140,29 +143,23 @@ public class Jmatriz8 extends javax.swing.JFrame {
             }
         }
     }
-
+    
     /*
-        1   2   3   4
-        8   7   6   5
-        9   10  11  12
-        16  15  14  13
-        17  18  19  20
-        
-     */
-    public int[][] llenarMatriz(int f, int c) {
+           1    1   1   1   1
+           2    2   2   2   2
+           3    3   3   3   3
+           4    4   4   4   4
+    
+    */
+    
+    public int[][] llenarMatriz(int f,int c){
         int m[][] = new int[f][c];
-        int a=0;
         for (int i = 0; i < f; i++) {
-            if (i % 2 == 0) {
-                for (int j = 0; j < c; j++) {
-                    m[i][j]=a++;
-                }
-            } else {
-                for (int j = c-1; j >= 0; j--) {
-                    m[i][j]=a++;
-                }
+            for (int j = 0; j < c; j++) {
+                m[j][i]=j+1;
             }
         }
+        
         return m;
     }
 

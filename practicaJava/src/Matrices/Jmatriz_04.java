@@ -5,19 +5,18 @@
  */
 package Matrices;
 
-import java.util.Random;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author ERIK
  */
-public class Jmatriz10 extends javax.swing.JFrame {
+public class Jmatriz_04 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Jframe10
+     * Creates new form Jmatriz4
      */
-    public Jmatriz10() {
+    public Jmatriz_04() {
         initComponents();
     }
 
@@ -30,22 +29,13 @@ public class Jmatriz10 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblmatriz = new javax.swing.JTable();
         btngenerar = new javax.swing.JButton();
         txtcolumn = new javax.swing.JTextField();
         txtrow = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblmatriz = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        txtsuma = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        btngenerar.setText("Generar");
-        btngenerar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btngenerarActionPerformed(evt);
-            }
-        });
 
         tblmatriz.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -57,32 +47,29 @@ public class Jmatriz10 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblmatriz);
 
-        jLabel1.setText("Suma");
-
-        txtsuma.setEnabled(false);
+        btngenerar.setText("Generar");
+        btngenerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btngenerarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(73, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtcolumn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtrow, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btngenerar, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtsuma, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(139, 139, 139)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btngenerar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtcolumn)
+                    .addComponent(txtrow))
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(152, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txtrow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -90,11 +77,11 @@ public class Jmatriz10 extends javax.swing.JFrame {
                 .addComponent(txtcolumn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btngenerar)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtsuma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(190, 190, 190))
+                .addGap(262, 262, 262))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         pack();
@@ -102,7 +89,6 @@ public class Jmatriz10 extends javax.swing.JFrame {
 
     private void btngenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngenerarActionPerformed
         // TODO add your handling code here:
-        
         int f = Integer.parseInt(txtrow.getText());
         int c = Integer.parseInt(txtcolumn.getText());
         this.mostrarMatriz(this.llenarMatriz(f, c), f, c);
@@ -125,63 +111,58 @@ public class Jmatriz10 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jmatriz10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jmatriz_04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jmatriz10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jmatriz_04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jmatriz10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jmatriz_04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jmatriz10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jmatriz_04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jmatriz10().setVisible(true);
+                new Jmatriz_04().setVisible(true);
             }
         });
     }
-
-    public void mostrarMatriz(int m[][], int f, int c) {
+    
+    public void mostrarMatriz(int m[][], int f, int c){
         DefaultTableModel model = (DefaultTableModel) tblmatriz.getModel();
         model.setRowCount(f);
         model.setColumnCount(c);
-
         for (int i = 0; i < f; i++) {
             for (int j = 0; j < c; j++) {
                 tblmatriz.setValueAt(m[i][j], i, j);
             }
         }
     }
-    /*
-        sumar los elementos de la diagonal de una matriz
+    /* 
+            1   1   1
+            0   1   1
+            0   0   1
     */
-
-    public int[][] llenarMatriz(int f, int c) {
-        int s=0;
-        int m[][] = new int[f][c];
-        Random r = new Random();
+    
+    public int [][] llenarMatriz(int f, int c){
+        int m[][]=new int[f][c];
         for (int i = 0; i < f; i++) {
-            for (int j = 0; j < c; j++) {
-               m[i][j]=r.nextInt(10);
-                if (i==j) {
-                    s=s+m[i][j];
-                }
+            for (int j = i; j < c; j++) {
+                m[i][j]=1; // 1 1 1 1 1
             }
         }
-        txtsuma.setText(String.valueOf(s));
         return m;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btngenerar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblmatriz;
     private javax.swing.JTextField txtcolumn;
     private javax.swing.JTextField txtrow;
-    private javax.swing.JTextField txtsuma;
     // End of variables declaration//GEN-END:variables
 }
