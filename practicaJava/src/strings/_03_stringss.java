@@ -13,7 +13,7 @@ import java.util.Scanner;
  * 
  *  introducir una cadena de caracteres  e indicar si es polindromo. otto == otto
  */
-public class _03_strings {
+public class _03_stringss {
     
     public static void main(String[] args) {
         String invert = "";

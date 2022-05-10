@@ -14,7 +14,7 @@ import java.util.Scanner;
  * dada una cadena, contar los caracteres repetidos continuos.
  *
  */
-public class _02_strings {
+public class _02_stringss {
 
     public static void main(String[] args) {
         String texto;   //  0 1 2 3 // holaaa
