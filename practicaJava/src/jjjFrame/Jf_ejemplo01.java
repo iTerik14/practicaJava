@@ -268,7 +268,7 @@ public class Jf_ejemplo01 extends javax.swing.JFrame {
 
         //calcular promedio de los pares
         promedio = suma / 5;
-        txtProm1.setText(String.valueOf(promedio));
+        txtProm1.setText(String.valueOf("hola"));
 
         //calcular la el promedio de los pares
         for (int i = 0; i < array.length; i++) {
