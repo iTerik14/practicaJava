@@ -16,6 +16,9 @@ public class Repaso02 {
     /*
         1 2 3 4
         5 6 7 8  2x4
+    
+        
+        
     */
 
     public static void main(String[] args) {
