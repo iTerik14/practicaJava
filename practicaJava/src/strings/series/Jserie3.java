@@ -8,7 +8,7 @@
     serie = 0,0,1,1,1,1,2,2,3,3,5,5,8,8,13,13...
     
  */
-package series;
+package strings.series;
 
 import javax.swing.table.DefaultTableModel;
 
