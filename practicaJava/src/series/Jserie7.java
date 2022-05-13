@@ -4,10 +4,10 @@
  * and open the template in the editor.
 
 
-    serie = 2,2,3,4,5,6,7,8,11,10,13,12,17,...
-
+    serie = 2,2,2,2,4,4,4,4,6,6,6,6,8,8,8,8,10,10,10,10...
+    
  */
-package strings.series;
+package series;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -15,12 +15,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author ERIK
  */
-public class Jserie9 extends javax.swing.JFrame {
+public class Jserie7 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Jserie9
+     * Creates new form Jserie7
      */
-    public Jserie9() {
+    public Jserie7() {
         initComponents();
     }
 
@@ -33,21 +33,21 @@ public class Jserie9 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnserie = new javax.swing.JButton();
+        btngenerar = new javax.swing.JButton();
         txtdim = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblserie = new javax.swing.JTable();
+        tblvector = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnserie.setText("generar");
-        btnserie.addActionListener(new java.awt.event.ActionListener() {
+        btngenerar.setText("Generar");
+        btngenerar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnserieActionPerformed(evt);
+                btngenerarActionPerformed(evt);
             }
         });
 
-        tblserie.setModel(new javax.swing.table.DefaultTableModel(
+        tblvector.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -55,43 +55,43 @@ public class Jserie9 extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(tblserie);
+        jScrollPane1.setViewportView(tblvector);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(txtdim, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnserie, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86)
+                .addComponent(txtdim, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btngenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 886, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnserie, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtdim, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtdim)
+                    .addComponent(btngenerar, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnserieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnserieActionPerformed
+    private void btngenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngenerarActionPerformed
         // TODO add your handling code here:
         int n = Integer.parseInt(txtdim.getText());
-        this.mostrarVector(this.llenarSerie(n));
-    }//GEN-LAST:event_btnserieActionPerformed
+        this.mostrarVector(this.llenarvector(n));
+    }//GEN-LAST:event_btngenerarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,64 +110,52 @@ public class Jserie9 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jserie9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jserie7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jserie9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jserie7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jserie9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jserie7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jserie9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jserie7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jserie9().setVisible(true);
+                new Jserie7().setVisible(true);
             }
         });
     }
     
-    public void mostrarVector(int v[]) {
-        DefaultTableModel model = (DefaultTableModel) tblserie.getModel();
+    public void mostrarVector(int v[]){
+        DefaultTableModel model = (DefaultTableModel) tblvector.getModel();
         model.setRowCount(1);
         model.setColumnCount(v.length);
         for (int i = 0; i < v.length; i++) {
-            tblserie.setValueAt(v[i], 0, i);
+            tblvector.setValueAt(v[i], 0, i);
         }
     }
     
-    public int[] llenarSerie(int n) {
+    public int[] llenarvector(int n){
         int v[] = new int[n];
-        int i = 0, j = 0, par = 2, p = 2, cp = 0;
-        while (i < n) {            
-            if (j == 1) {
-                v[i] = par;
-                par += 2;
-                j = 0;
-                i++;
-            } else {
-                for (int k = 1; k <= p; k++) {
-                    if (p % k == 0) {
-                        cp++;
-                    }
-                }
-                if (cp == 2) {
-                    v[i] = p;
-                    j = 1;
-                    i++;
-                }
-                cp = 0;
-                p++;
+        int j=1,par=2;
+        for (int i = 0; i < v.length; i++) {
+            v[i]=par;
+            if (j<4) {
+                j++;
+            }else{
+                j=1;
+                par+=2;
             }
         }
         return v;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnserie;
+    private javax.swing.JButton btngenerar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblserie;
+    private javax.swing.JTable tblvector;
     private javax.swing.JTextField txtdim;
     // End of variables declaration//GEN-END:variables
 }

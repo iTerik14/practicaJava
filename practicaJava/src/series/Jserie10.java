@@ -2,12 +2,8 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
-
-
-    serie = 0,1,1,0,0,0,1,1,1,1,0,0,0,0,0...
-    
  */
-package strings.series;
+package series;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -15,12 +11,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author ERIK
  */
-public class Jserie6 extends javax.swing.JFrame {
+public class Jserie10 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Jserie6
+     * Creates new form Jserie10
      */
-    public Jserie6() {
+    public Jserie10() {
         initComponents();
     }
 
@@ -34,20 +30,20 @@ public class Jserie6 extends javax.swing.JFrame {
     private void initComponents() {
 
         txtdim = new javax.swing.JTextField();
-        btngenerar = new javax.swing.JButton();
+        btnserie = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblvector = new javax.swing.JTable();
+        tblserie = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btngenerar.setText("Generar");
-        btngenerar.addActionListener(new java.awt.event.ActionListener() {
+        btnserie.setText("Generar");
+        btnserie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btngenerarActionPerformed(evt);
+                btnserieActionPerformed(evt);
             }
         });
 
-        tblvector.setModel(new javax.swing.table.DefaultTableModel(
+        tblserie.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -55,43 +51,43 @@ public class Jserie6 extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(tblvector);
+        jScrollPane1.setViewportView(tblserie);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(txtdim, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btngenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100)
+                .addComponent(txtdim, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnserie, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtdim, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btngenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                    .addComponent(txtdim, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnserie, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btngenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngenerarActionPerformed
+    private void btnserieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnserieActionPerformed
         // TODO add your handling code here:
         int n = Integer.parseInt(txtdim.getText());
-        this.mostrarVector(this.llenarVector(n));
-    }//GEN-LAST:event_btngenerarActionPerformed
+        this.mostrarSerie(this.llenarSerie(n));
+    }//GEN-LAST:event_btnserieActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,44 +106,48 @@ public class Jserie6 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jserie6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jserie10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jserie6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jserie10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jserie6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jserie10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jserie6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jserie10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jserie6().setVisible(true);
+                new Jserie10().setVisible(true);
             }
         });
     }
     
-    public void mostrarVector(int v[]){
-        DefaultTableModel mo = (DefaultTableModel) tblvector.getModel();
-        mo.setRowCount(1);
-        mo.setColumnCount(v.length);
+    public void mostrarSerie(int v[]){
+        DefaultTableModel model = (DefaultTableModel) tblserie.getModel();
+        model.setRowCount(1);
+        model.setColumnCount(v.length);
         for (int i = 0; i < v.length; i++) {
-            tblvector.setValueAt(v[i], 0, i);
+            tblserie.setValueAt(v[i], 0, i);
         }
     }
     
-    public int[] llenarVector(int n){
-        int v[] = new int[n];
-        int i,x=1,j=1,b=0;
-        for (i = 0; i < n; i++) {
-            v[i]=b;
-            if (j<x) {
-                j++;
-                
+    public int [] llenarSerie(int n){
+        int v[]=new int[n];
+        int i=0,a=0,b=1,imp=1,aux=0,j=1;
+        while (i<n) {            
+            if (j==1) {
+                v[i]=a;
+                aux=a+b;
+                a=b;
+                b=aux;
+                i++;
+                j=0;
             }else{
-                x++;
-                b=1-b;
+                v[i]=imp;
+                imp+=2;
+                i++;
                 j=1;
             }
         }
@@ -155,9 +155,9 @@ public class Jserie6 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btngenerar;
+    private javax.swing.JButton btnserie;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblvector;
+    private javax.swing.JTable tblserie;
     private javax.swing.JTextField txtdim;
     // End of variables declaration//GEN-END:variables
 }
