@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package strings.series;
+package strings;
 
 import java.util.Scanner;
 
@@ -17,7 +17,11 @@ import java.util.Scanner;
 public class Repetidos {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        String cadena = leer.nextLine();
         
+        String cadena = "hola soy un texto";
+        StringBuilder a = new StringBuilder(cadena);
+        String cad = cadena;
+        System.out.println(cadena);
+        System.out.println(cad);
     }    
 }
