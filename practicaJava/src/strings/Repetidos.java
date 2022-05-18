@@ -10,18 +10,31 @@ import java.util.Scanner;
 /**
  *
  * @author ERIK
- * 
- * 
- *      dada una cadena, contar los caracteres repetidos continuos.
+ *
+ *
+ * dada una cadena, contar los caracteres repetidos continuos.
  */
 public class Repetidos {
+
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
-        
-        String cadena = "hola soy un texto";
-        StringBuilder a = new StringBuilder(cadena);
-        String cad = cadena;
-        System.out.println(cadena);
-        System.out.println(cad);
-    }    
+        String cadena = "hohhallee";
+        String cadena2 = cadena.toLowerCase();
+        String[] texto = cadena2.split("");
+        int cont = 1;
+        String car = "";
+        for (int i = 0; i < texto.length; i++) {
+            car = texto[i];
+            for (int j = 0; j < texto.length; j++) {
+                if (car.equals(texto[j])) {
+                    if (texto[j].equals(texto[j+1])) {
+                        cont++;
+                    }
+                }
+            }
+            if (cont>=2) {
+                System.out.println(car+" "+cont);
+            }
+            cont=0;
+        }
+    }
 }
