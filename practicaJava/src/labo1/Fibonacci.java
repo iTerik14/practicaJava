@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jjjFrame;
+package labo1;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -11,12 +11,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Pc25
  */
-public class serie1 extends javax.swing.JFrame {
+public class Fibonacci extends javax.swing.JFrame {
 
     /**
-     * Creates new form serie1
+     * Creates new form Fibonacci
      */
-    public serie1() {
+    public Fibonacci() {
         initComponents();
     }
 
@@ -29,14 +29,27 @@ public class serie1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtDimension1 = new javax.swing.JTextField();
+        btnGenerarf = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblVectors = new javax.swing.JTable();
-        txtDimensions = new javax.swing.JTextField();
-        btnGenerars = new javax.swing.JButton();
+        tblVectorf = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tblVectors.setModel(new javax.swing.table.DefaultTableModel(
+        txtDimension1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDimension1ActionPerformed(evt);
+            }
+        });
+
+        btnGenerarf.setText("Generar");
+        btnGenerarf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGenerarfActionPerformed(evt);
+            }
+        });
+
+        tblVectorf.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -44,63 +57,50 @@ public class serie1 extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane2.setViewportView(tblVectors);
-
-        txtDimensions.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDimensionsActionPerformed(evt);
-            }
-        });
-
-        btnGenerars.setText("Generar");
-        btnGenerars.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGenerarsActionPerformed(evt);
-            }
-        });
+        jScrollPane2.setViewportView(tblVectorf);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(164, 164, 164)
-                .addComponent(txtDimensions, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(178, 178, 178)
+                .addComponent(txtDimension1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(138, 138, 138)
-                .addComponent(btnGenerars, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnGenerarf, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 598, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(217, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDimensions, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGenerars, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
+                    .addComponent(txtDimension1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGenerarf, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtDimensionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDimensionsActionPerformed
+    private void txtDimension1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDimension1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDimensionsActionPerformed
+    }//GEN-LAST:event_txtDimension1ActionPerformed
 
-    private void btnGenerarsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarsActionPerformed
+    private void btnGenerarfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarfActionPerformed
         // TODO add your handling code here:
-        int n = Integer.parseInt(txtDimensions.getText());
+        int n = Integer.parseInt(txtDimension1.getText());
         //crear el vector
-        int[] a = new int[n];
+        int[] a = new int[30];
         a = this.llenarVector(n);
         this.mostrarVector(a, n);
-    }//GEN-LAST:event_btnGenerarsActionPerformed
+    }//GEN-LAST:event_btnGenerarfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,67 +119,54 @@ public class serie1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(serie1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Fibonacci.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(serie1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Fibonacci.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(serie1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Fibonacci.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(serie1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Fibonacci.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new serie1().setVisible(true);
+                new Fibonacci().setVisible(true);
             }
         });
     }
-
-    public void mostrarVector(int a[], int n) {
-
-        DefaultTableModel model = (DefaultTableModel) tblVectors.getModel();
+    
+    public void mostrarVector(int a[], int n){
+        
+        DefaultTableModel model = (DefaultTableModel) tblVectorf.getModel();
         model.setRowCount(1);
         model.setColumnCount(n);
         for (int i = 0; i < a.length; i++) {
-            tblVectors.setValueAt(a[i], 0, i);
+            tblVectorf.setValueAt(a[i], 0, i);
         }
     }
     
-    // 1 2 3 4 5 6 7 8 9
-    // 1 0 2 0 0 3 0 0 0 4 0 0 0 0 5 0
-    public int[] llenarVector(int n) {
+    public int[] llenarVector(int n){
         int a[] = new int[n];
-        int i = 0;
-        int a1 = 1;
-        int p = 1;
-        int d = 0;
-        int t = 1;
-        int r = 1;
-        while (i < a.length) {
-            if (a1 == r) {
-                a[i] = t;
-                i++;
-                r++;
-            } else {
-                if (p <= t) {
-                    a[i] = d;
-                    i++;
-                    p++;
-                } else {
-                    a1 = r;
-                    p = 1;
-                    t++;
-                }
-            }
+        int x=0;
+        int y=1;
+        int aux=0;
+        for (int i = 0; i < a.length; i++) {
+            a[i]= x;
+            aux=x+y;
+            x=y;
+            y=aux;        
         }
         return a;
     }
+
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnGenerars;
+    private javax.swing.JButton btnGenerarf;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tblVectors;
-    private javax.swing.JTextField txtDimensions;
+    private javax.swing.JTable tblVectorf;
+    private javax.swing.JTextField txtDimension1;
     // End of variables declaration//GEN-END:variables
 }
