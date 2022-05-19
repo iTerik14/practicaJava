@@ -9,12 +9,12 @@ import java.util.Scanner;
  *   Crear un programa que lea por teclado una cadena, y muestre la siguiente
  *   información:
  *
- * - Imprima los dos primeros caracteres. √
- * - Imprima los tres últimos caracteres. √
- * - Imprima dicha cadena cada dos caracteres. Ej.: recta debería imprimir rca √
- * - Dicha cadena en sentido inverso. Ej.: hola mundo! debe imprimir !odnum aloh √
+ * - Imprima los dos primeros caracteres. 
+ * - Imprima los tres últimos caracteres. 
+ * - Imprima dicha cadena cada dos caracteres. Ej.: recta debería imprimir rca 
+ * - Dicha cadena en sentido inverso. Ej.: hola mundo! debe imprimir !odnum aloh 
  * - Imprima la cadena en un sentido y en sentido inverso. Ej: reflejo imprime 
- *   reflejoojelfer. √
+ *   reflejoojelfer.
  */
 public class _01_ejer {
     public static void main(String[] args) {

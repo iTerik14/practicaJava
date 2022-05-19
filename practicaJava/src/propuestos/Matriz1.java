@@ -11,6 +11,11 @@ package propuestos;
  */
 public class Matriz1 {
     public static void main(String[] args) {
-        
+        String mat[][]={{"camila","carla","juan"},{"camila","carla","juan"},{"camila","carla","juan"}};
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                
+            }
+        }
     }
 }
