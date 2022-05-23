@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author ERIK
  * 
  *  n = 7
- *  [0,5,0,1,8,0,9]
+ *  [0,5,0,1,8,0,9]  
  *  a = 0
  *  b = 3
  */
