@@ -143,7 +143,7 @@ public class JMatrizGusaito extends javax.swing.JFrame {
     }
 
     /*
-    
+       //0   1   2   3   4
     0    1   2   3   4   5           
     1    10  9   8   7   6
     2    11  12  13  14  15
@@ -155,20 +155,18 @@ public class JMatrizGusaito extends javax.swing.JFrame {
     public int[][] matrizGusano(int f, int c) {
         int m[][] = new int[f][c];
         int a = 1;
-        for (int i = 0; i < f; i++) {        //  0 1
-
-            if (i % 2 == 0) { // 1/2=1 / 1 
+        for (int i = 0; i < f; i++) {//  0 1
+            if (i % 2 == 0) {// 
                 for (int j = 0; j < c; j=j+1) { // 0 1 2 3 4 5
-                    m[i][j]=a;  // 1 2 3
+                    m[0][4]=a;  // 1 2 3
                     a=a+1; // 6
                 }
             } else {
-                for (int j = c-1; j>=0 ; j--) {
-                    m[i][j]=a;
-                    a++;
+                for (int j = c-1; j>=0 ; j=j-1) { //5-1=4 3
+                    m[1][3]=a;//
+                    a=a+1;//7
                 }
             }
-
         }
         return m;
     }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package strings;
 
 /**
@@ -15,7 +10,7 @@ package strings;
 public class Repetidos {
 
     public static void main(String[] args) {
-        String cadena = "aholllaaall";
+        String cadena = "aaabcccbbbaaccc";
         String cadena2 = cadena.toLowerCase();
         String[] texto = cadena2.split("");
         int cont = 1;
@@ -23,9 +18,9 @@ public class Repetidos {
         for (int i = 0; i < texto.length; i++) {
             car = texto[i];
             if (!(comp(texto, i))) {
-                for (int j = i+1; j < texto.length; j++) {
+                for (int j = i+1; j < texto.length-1; j++) {
                     if (car.equals(texto[j])) {
-                        if (texto[j].equals(texto[j - 1])) {
+                        if (texto[j].equals(texto[j+1])) {
                             cont++;
                         }
                     }

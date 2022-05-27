@@ -5,6 +5,8 @@
  */
 package lab8;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ERIK
@@ -81,11 +83,11 @@ public class _02_string extends javax.swing.JFrame {
         int cont = 1;
         texto = txt1.getText();  //HolaAa / holaaa= [h,o,l,a,a,a]
         String texto1 = texto.toLowerCase(); // todo minuscula
-        texto2 = texto1.split(""); // array [h,o,l,a,a,a] 6
+        texto2 = texto1.split(""); // array [h,o,l,a,a,a,l,l,a,a] 6
         for (int i = 0; i < texto2.length; i++) {
             car = texto2[i];
             if (!(this.comp(texto2, i))) {
-                for (int j = 0; j < texto2.length; j++) {
+                for (int j = i+1; j < texto2.length; j++) {
                     if (car.equals(texto2[j])) {
                         if (texto2[j].equals(texto2[j-1])) {
                             cont++;
@@ -95,7 +97,7 @@ public class _02_string extends javax.swing.JFrame {
                 }
             }
             if (cont>1) {
-                System.out.println(car+"se repite "+cont);
+                JOptionPane.showMessageDialog(null, car+"se repite "+cont);
             }
 
         }
