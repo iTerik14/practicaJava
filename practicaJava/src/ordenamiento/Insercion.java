@@ -14,32 +14,32 @@ public class Insercion {
     public static void main(String[] args) {
         int j = 0;
         int actual = 0;
-        int v[] = {8, 5, 2, 4, 7, 9, 3, 1, 6};
-        for (int i = 0; i < v.length; i++) {
-            System.out.print(" " + v[i]);
+        int vector[] = {8, 5, 2, 4, 7, 9, 3, 1, 6};//9
+        for (int i = 0; i < vector.length; i++) {
+            System.out.print(" " + vector[i]);
         }
         System.out.println("");
         System.out.println("\n***ORDENANDO***");
-        
-        for (int i = 1; i < v.length; i++) {
-            j = i;
-            actual = v[j];
-            while ((j > 0) && (v[j - 1] > actual)) {
-                v[j] = v[j - 1];
-                j--;
+
+        for (int i = 1; i < vector.length; i = i + 1) {//1 2 3 4 5
+            actual = vector[i];//
+            for (j = i; (j > 0) && (vector[j - 1] > actual); j--) {
+                vector[j] = vector[j - 1];
             }
-            v[j] = actual;
+            vector[j] = actual;
+
             
-            System.out.print("["+i+"] » ");
-            for (int h = 0; h < v.length; h++) {
-                System.out.print(" " + v[h]);
+            
+            System.out.print("[" + i + "] » ");
+            for (int h = 0; h < vector.length; h++) {
+                System.out.print(" " + vector[h]);
             }
             System.out.println("");
         }
-        
+
         System.out.println("\n***ORDENADO***");
-        for (int i = 0; i < v.length; i++) {
-            System.out.print(" " + v[i]);
+        for (int i = 0; i < vector.length; i++) {
+            System.out.print(" " + vector[i]);
         }
         System.out.println("");
     }
