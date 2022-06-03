@@ -25,20 +25,20 @@ public class ShellSort {
 
     public static int[] shell(int[] arreglo) {
         int inter, i, aux, p = 0;
-        boolean band;
+        boolean ord;
         inter = arreglo.length;
         while (inter > 0) {
             inter = inter / 2;
-            band = true;
-            while (band) {
-                band = false;
+            ord = true;
+            while (ord) {
+                ord = false;
                 i = 0;
                 while ((i + inter) <= arreglo.length - 1) {//2.1.1
                     if (arreglo[i] > arreglo[i + inter]) {
                         aux = arreglo[i];
                         arreglo[i] = arreglo[i + inter];
                         arreglo[i + inter] = aux;
-                        band = true;
+                        ord = true;
                     }
                     i = i + 1;
                 }
