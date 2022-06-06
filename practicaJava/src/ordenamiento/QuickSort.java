@@ -5,7 +5,6 @@
  */
 package ordenamiento;
 
-import java.util.Arrays;
 
 /**
  *
@@ -13,65 +12,118 @@ import java.util.Arrays;
  */
 public class QuickSort {
     
-public static void main(String[] args) {
-        int numeros[] = {1, 9, 23, 4, 55, 100, 1, 1, 23};
-        System.out.println("Antes de QS: " + Arrays.toString(numeros));
-        quicksort(numeros, 0, numeros.length - 1);
-        System.out.println("Después de QS: " + Arrays.toString(numeros));
+    public static void main(String[] args) {
+        int v[]={1,5,4,8,6,3,2,9,7};
+        for (int i = 0; i < v.length; i++) {
+            System.out.print(" "+v[i]);
+        }
+        System.out.println("");
+        
+        quicksort(v, 0, v.length-1);
+        
+        System.out.println("**ORDENADO**");
+        
+        for (int i = 0; i < v.length; i++) {
+            System.out.print(" "+v[i]);
+        }
+        System.out.println("");
     }
 
-    private static int particion(int arreglo[], int izquierda, int derecha) {
-        // Elegimos el pivote, es el primero
-        int pivote = arreglo[izquierda];
-        // Ciclo infinito
-        while (true) {
-            // Mientras cada elemento desde la izquierda esté en orden (sea menor que el
-            // pivote) continúa avanzando el índice
-            while (arreglo[izquierda] < pivote) {
-                izquierda++;
+    public static void quicksort(int A[], int izq, int der) {
+
+        int pivote = A[izq]; // tomamos primer elemento como pivote
+        int i = izq;         // i realiza la búsqueda de izquierda a derecha
+        int j = der;         // j realiza la búsqueda de derecha a izquierda
+        int aux;
+
+        while (i < j) {                          // mientras no se crucen las búsquedas                                   
+            while (A[i] <= pivote && i < j) {
+                i++; // busca elemento mayor que pivote
             }
-            // Mientras cada elemento desde la derecha esté en orden (sea mayor que el
-            // pivote) continúa disminuyendo el índice
-            while (arreglo[derecha] > pivote) {
-                derecha--;
+            while (A[j] > pivote) {
+                j--;           // busca elemento menor que pivote
             }
-    /*
-    Si la izquierda es mayor o igual que la derecha significa que no
-    necesitamos hacer ningún intercambio
-    de variables, pues los elementos ya están en orden (al menos en esta
-    iteración)
-    */
-            if (izquierda >= derecha) {
-                // Indicar "en dónde nos quedamos" para poder dividir el arreglo de nuevo
-                // y ordenar los demás elementos
-                return derecha;
-            } else {//Nota: yo sé que el else no hace falta por el return de arriba, pero así el algoritmo es más claro
-      /*
-      Si las variables quedaron "lejos" (es decir, la izquierda no superó ni
-      alcanzó a la derecha)
-      significa que se detuvieron porque encontraron un valor que no estaba
-      en orden, así que lo intercambiamos
-      */
-                int temporal = arreglo[izquierda];
-                arreglo[izquierda] = arreglo[derecha];
-                arreglo[derecha] = temporal;
-      /*
-      Ya intercambiamos, pero seguimos avanzando los índices una vez más
-      */
-                izquierda++;
-                derecha--;
+            if (i < j) {                        // si no se han cruzado                      
+                aux = A[i];                      // los intercambia
+                A[i] = A[j];
+                A[j] = aux;
             }
-            // El while se repite hasta que izquierda >= derecha
+        }
+
+        A[izq] = A[j];      // se coloca el pivote en su lugar de forma que tendremos                                    
+        A[j] = pivote;      // los menores a su izquierda y los mayores a su derecha
+
+        if (izq < j - 1) {
+            quicksort(A, izq, j - 1);          // ordenamos subarray izquierdo
+        }
+        if (j + 1 < der) {
+            quicksort(A, j + 1, der);          // ordenamos subarray derecho
         }
     }
 
-
-    // Divide y vencerás
-    private static void quicksort(int arreglo[], int izquierda, int derecha) {
-        if (izquierda < derecha) {
-            int indiceParticion = particion(arreglo, izquierda, derecha);
-            quicksort(arreglo, izquierda, indiceParticion);
-            quicksort(arreglo, indiceParticion + 1, derecha);
+    //Metodo de ordenamineto Quick Sort
+    static void quicksor(int arreglo[], int primero, int ultimo) {
+        int central, i, j;
+        int pivote;
+        central = (primero + ultimo) / 2;
+        pivote = arreglo[central];
+        i = primero;
+        j = ultimo;
+        do {
+            while (arreglo[i] < pivote) {
+                i++;
+            }
+            while (arreglo[j] > pivote) {
+                j--;
+            }
+            if (i <= j) {
+                int temp;
+                temp = arreglo[i];
+                arreglo[i] = arreglo[j];
+                /*intercambia A[i] con A[j] */
+                arreglo[j] = temp;
+                i++;
+                j--;
+            }
+        } while (i <= j);
+        
+        if (primero < j) {
+            quicksort(arreglo, primero, j);
+            /*mismo proceso con sublista izquierda*/
+        }
+        if (i < ultimo) {
+            quicksort(arreglo, i, ultimo);
+            /*mismo proceso con sublista derecha*/
         }
     }
+
+    public static void quick_srt(int array[], int low, int n) {
+        int lo = low;
+        int hi = n;
+        if (lo >= n) {
+            return;
+        }
+        int mid = array[(lo + hi) / 2];
+        while (lo < hi) {
+            while (lo < hi && array[lo] < mid) {
+                lo++;
+            }
+            while (lo < hi && array[hi] > mid) {
+                hi--;
+            }
+            if (lo < hi) {
+                int T = array[lo];
+                array[lo] = array[hi];
+                array[hi] = T;
+            }
+        }
+        if (hi < lo) {
+            int T = hi;
+            hi = lo;
+            lo = T;
+        }
+        quick_srt(array, low, lo);
+        quick_srt(array, lo == low ? lo + 1 : lo, n);
+    }
+
 }
