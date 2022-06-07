@@ -5,26 +5,25 @@
  */
 package ordenamiento;
 
-
 /**
  *
  * @author ERIK
  */
 public class QuickSort {
-    
+
     public static void main(String[] args) {
-        int v[]={1,5,4,8,6,3,2,9,7};
+        int v[] = {1, 5, 4, 8, 6, 3, 2, 9, 7};
         for (int i = 0; i < v.length; i++) {
-            System.out.print(" "+v[i]);
+            System.out.print(" " + v[i]);
         }
         System.out.println("");
-        
-        quicksort(v, 0, v.length-1);
-        
+
+        quicksort(v, 0, v.length - 1);
+
         System.out.println("**ORDENADO**");
-        
+
         for (int i = 0; i < v.length; i++) {
-            System.out.print(" "+v[i]);
+            System.out.print(" " + v[i]);
         }
         System.out.println("");
     }
@@ -86,7 +85,7 @@ public class QuickSort {
                 j--;
             }
         } while (i <= j);
-        
+
         if (primero < j) {
             quicksort(arreglo, primero, j);
             /*mismo proceso con sublista izquierda*/

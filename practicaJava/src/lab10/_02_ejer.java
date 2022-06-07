@@ -59,7 +59,7 @@ public class _02_ejer extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setText("InsertionSort");
+        jLabel4.setText("Insertion Sort");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("METODOS DE ORDENACION Y BUSQUEDA");
